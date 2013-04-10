@@ -6,6 +6,7 @@ Usage
 ======
  Usage with post-commit git hook:
 
+<pre>
  #!/bin/bash
 
  branch=$(git rev-parse --symbolic --abbrev-ref $1)
@@ -16,7 +17,7 @@ Usage
    echo ' Starting deploy via CI to Staging environment '
    echo '==============================================='
 
-   python ./hooks/ci_mon.py "http://jenkins.example.com:8080" cserv-stage-deploy
+   python ./hooks/ci_mon.py "http://jenkins.example.com:8080" "jenkins-job-name"
  fi
-
+</pre>
 
